@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="Header/header.css">
+  <link rel="stylesheet" href="Footer/footer.css">
+  <!-- Header/Footer-Skripte -->
+  <script src="header-footer-import.js"></script>
+  <script src="Header/header.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="login-form">
+    <h2>Login</h2>
+    <form id="loginForm" method="POST" action="http://127.0.0.1:3002/login">
+      <div class="form-group">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" placeholder="Dein Benutzername" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" placeholder="Mind. 6 Zeichen" minlength="6" required>
+      </div>
+    
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+    
+    <!-- Zusätzliche Navigation -->
+    <p>Noch keinen Account? <a href="registration.html">Registrieren</a></p>
+    <p><a href="index.html">Zurück zum Hauptmenü</a></p>
+  </div>
+
+  <div id="footer"></div>
+  <script src="KA.js"></script>
+</body>
+</html>

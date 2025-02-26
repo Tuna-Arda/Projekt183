@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrierung</title>
+  <!-- CSS-Dateien -->
+  <link rel="stylesheet" href="registration.css">
+  <link rel="stylesheet" href="Header/header.css">
+  <link rel="stylesheet" href="Footer/footer.css">
+  <!-- Header/Footer-Skripte -->
+  <script src="header-footer-import.js"></script>
+  <script src="Header/header.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="registration-form">
+    <h2>Registrieren</h2>
+    <!-- Formular ohne action – JavaScript übernimmt die Verarbeitung -->
+    <form id="registerForm" method="POST">
+      <div class="form-group">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" placeholder="Wähle einen Benutzernamen" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" placeholder="Mind. 15 Zeichen" minlength="15" required>
+      </div>
+
+      <div class="form-group">
+        <label for="birthday">Geburtsdatum:</label>
+        <input type="date" id="birthday" name="birthday" required>
+      </div>
+
+      <!-- Fake reCAPTCHA wurde entfernt -->
+
+      <div class="form-group">
+        <!-- Button als type="button", damit das Formular nicht automatisch abgesendet wird -->
+        <button type="button" id="registerBtn">Registrieren</button>
+      </div>
+    </form>
+    <!-- Zusätzliche Navigation -->
+    <p>Bereits einen Account? <a href="login.html">Login</a></p>
+    <p><a href="index.html">Zurück zum Hauptmenü</a></p>
+  </div>
+
+  <div id="footer"></div>
+  <!-- Dein JavaScript, das die Registrierung via fetch() übernimmt -->
+  <script src="KA.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2025-02-26T12:28:27.733Z",
+    "eventType": "REGISTER",
+    "user": "Tuna",
+    "action": "Neuer Benutzer registriert"
+  },
+  {
+    "timestamp": "2025-02-26T12:30:47.182Z",
+    "eventType": "REGISTER",
+    "user": "admin",
+    "action": "Neuer Benutzer registriert"
+  }
+]

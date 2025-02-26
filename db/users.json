@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1740572907730,
+    "username": "Tuna",
+    "passwordHash": "$2b$10$AoZH.Rdce819fY8cnExmNOfmN9aSt0Tf8uYJg6Ou8UGgW8jNdjED.",
+    "twoFactorSecret": null,
+    "isTwoFactorEnabled": false
+  },
+  {
+    "id": 1740573047181,
+    "username": "admin",
+    "passwordHash": "$2b$10$zyUkE46jb4m2VRZRMbYN9.ag8UKW9saUsX7Dbw8pEIuYnBaee3eLi",
+    "twoFactorSecret": null,
+    "isTwoFactorEnabled": false
+  }
+]

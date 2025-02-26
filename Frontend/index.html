@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startseite Basel Coin</title>
+  <style>
+    /* Gesamte Seite */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* Container für das Video im Hintergrund */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Hintergrund */
+      overflow: hidden;
+    }
+    .video-background iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* Um den 16:9-Aspekt zu erhalten, wird die Breite relativ zur Höhe berechnet */
+      width: 177.78vh;
+      height: 100vh;
+    }
+    /* Inhaltscontainer */
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      max-width: 90%;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- YouTube-Video als Hintergrund -->
+  <div class="video-background">
+    <iframe src="https://www.youtube.com/embed/26bN6AUIfNA?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=26bN6AUIfNA" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
+    </iframe>
+  </div>
+  <script>
+    // Timer startet bei 2 Minuten (120 Sekunden)
+    let remainingSeconds = 120;
+    const timerEl = document.getElementById("sessionTimer");
+
+    function updateTimer() {
+      const minutes = Math.floor(remainingSeconds / 60);
+      const seconds = remainingSeconds % 60;
+      timerEl.textContent = `Session endet in ${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+      
+      if (remainingSeconds <= 0) {
+        clearInterval(timerInterval);
+        // Option 1: Weiterleitung zur Login-Seite
+        window.location.href = "login.html";
+        // Option 2: Logout-Endpunkt anrufen (falls du via fetch die Session im Backend beenden willst)
+        /*
+        fetch('http://127.0.0.1:3002/logout')
+          .then(() => window.location.href = "login.html")
+          .catch(err => console.error(err));
+        */
+      }
+      remainingSeconds--;
+    }
+    
+    const timerInterval = setInterval(updateTimer, 1000);
+    updateTimer();  // sofortiges Update, damit der Timer nicht erst nach 1 Sekunde startet
+
+    // Optional: Logout-Button, um manuell auszuloggen
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      window.location.href = "login.html";
+      // oder:
+      /*
+      fetch('http://127.0.0.1:3002/logout')
+        .then(() => window.location.href = "login.html")
+        .catch(err => console.error(err));
+      */
+    });
+  </script>
+
+  <!-- Inhalt über dem Video -->
+  <div class="container">
+    <h1>Willkommen bei Basel Coin</h1>
+    <a href="login.html" class="button">Login</a>
+    <a href="registration.html" class="button">Registrierung</a>
+  </div>
+</body>
+</html>

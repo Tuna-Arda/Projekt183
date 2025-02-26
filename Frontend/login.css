@@ -1,0 +1,101 @@
+/* Grundlegendes Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    /* Cybersecurity-inspiriertes Hintergrundbild für Login */
+    background: url('https://th.bing.com/th/id/OIP.1_seg-IqXsYwM0zxRtLwCQAAAA?w=253&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  #header,
+  #footer {
+    flex-shrink: 0;
+  }
+  
+  /* Login-Form Container */
+  .login-form {
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 350px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #5c9ded;
+    outline: none;
+  }
+  
+  /* Button-Styling */
+  .form-group button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #5c9ded;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-group button:hover {
+    background-color: #4a86cf;
+  }
+  
+  /* Navigation Links */
+  .login-form p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .login-form a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
